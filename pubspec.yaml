@@ -1,5 +1,5 @@
-name: video_editor
-description: Video and photo editor app
+name: test_app
+description: A simple test app
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -9,10 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^1.0.4
-  video_player: ^2.8.1
-  share_plus: ^7.2.1
-  path_provider: ^2.1.0
 
 dev_dependencies:
   flutter_test:
