@@ -1,40 +1,19 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:video_player/video_player.dart';
-import 'package:chewie/chewie.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:gallery_saver/gallery_saver.dart';
 
-void main() => runApp(VideoEditorApp());
+void main() => runApp(MyApp());
 
-class VideoEditorApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        title: 'Video Editor',
-        theme: ThemeData.dark(),
-        home: HomeScreen(),
-        debugShowCheckedModeBanner: false,
-      );
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: Text('Editor Pro')),
-        body: Padding(
-          padding: EdgeInsets.all(20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _buildButton(Icons.photo, 'Edit Photo', () => Navigator.push(context, MaterialPageRoute(builder: (_) => EditorScreen(type: MediaType.image)))),
-              SizedBox(height: 20),
-              _buildButton(Icons.video_library, 'Edit Video', () => Navigator.push(context, MaterialPageRoute(builder: (_) => EditorScreen(type: MediaType.video)))),
-            ],
-          ),
-        ),
-      );
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Test',
+      home: Scaffold(
+        appBar: AppBar(title: Text('Success!')),
+        body: Center(child: Text('APK built successfully')),
+      ),
+    );
+  }
+}      );
 
   Widget _buildButton(IconData icon, String label, VoidCallback onTap) => ElevatedButton.icon(
         onPressed: onTap,
