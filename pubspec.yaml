@@ -1,5 +1,5 @@
-name: test_app
-description: A simple test app
+name: simple_app
+description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
 
