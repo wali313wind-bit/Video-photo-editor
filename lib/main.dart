@@ -7,8 +7,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Test')),
-        body: Center(child: Text('OK')),
+        appBar: AppBar(title: Text('Success')),
+        body: Center(child: Text('APK built!')),
       ),
     );
   }
