@@ -11,11 +11,8 @@ dependencies:
     sdk: flutter
   image_picker: ^1.0.4
   video_player: ^2.8.1
-  chewie: ^1.7.0
   share_plus: ^7.2.1
   path_provider: ^2.1.0
-  permission_handler: ^11.0.1
-  gallery_saver: ^2.3.2
 
 dev_dependencies:
   flutter_test:
