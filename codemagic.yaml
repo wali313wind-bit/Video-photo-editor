@@ -1,6 +1,6 @@
 workflows:
-  build-app:
-    name: Build Media Editor
+  android-build:
+    name: Android Build
     environment:
       flutter: stable
     scripts:
@@ -15,4 +15,3 @@ workflows:
           - your-email@gmail.com
         notify:
           success: true
-          failure: true
