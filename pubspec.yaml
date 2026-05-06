@@ -1,21 +1,17 @@
-name: media_editor
-description: Professional Photo & Video Editor
-version: 1.0.0+1
-
-environment:
-  sdk: ">=3.0.0 <4.0.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
-  image_picker: ^1.0.5
-  video_player: ^2.8.0
-  gallery_saver: ^2.3.2
-  permission_handler: ^11.0.0
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-flutter:
-  uses-material-design: true
+workflows:
+  android-build:
+    name: Android Build
+    environment:
+      flutter: stable
+    scripts:
+      - flutter clean
+      - flutter pub get
+      - flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+    publishing:
+      email:
+        recipients:
+          - your-email@gmail.com
+        notify:
+          success: true
