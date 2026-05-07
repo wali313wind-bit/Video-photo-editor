@@ -1,21 +1,21 @@
-name: media_editor
-description: Photo & Video Editor
+name: pro_image_editor
+description: اپلیکیشن حرفه‌ای ادیت عکس
+publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.0.0 <4.0.0"
+  sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^1.0.5
-  video_player: ^2.8.0
-  gallery_saver: ^2.3.2
-  permission_handler: ^11.0.0
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
+  image_picker: ^1.0.5
+  image_gallery_saver: ^2.0.3
+  permission_handler: ^11.0.1
+  cached_network_image: ^3.3.1
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
