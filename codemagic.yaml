@@ -1,28 +1,13 @@
 workflows:
-  android-workflow:
-    name: Android Build
-    max_build_duration: 60
+  android-only:
+    name: Android APK
     instance_type: mac_mini_m2
-    
     environment:
       flutter: stable
-      xcode: latest
-      
-    cache:
-      cache_paths:
-        - ~/.pub-cache
-        - ~/.gradle/caches
-        
     scripts:
-      - name: Install dependencies
+      - name: دریافت وابستگی‌ها
         script: flutter pub get
-      - name: Build Android APK
+      - name: ساخت APK
         script: flutter build apk --release
-        
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
-      
-    publishing:
-      email:
-        recipients:
-          - your-email@example.com
