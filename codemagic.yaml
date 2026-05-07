@@ -5,9 +5,8 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: دریافت وابستگی‌ها
-        script: flutter pub get
-      - name: ساخت APK
-        script: flutter build apk --release
+      - flutter create . --platforms android --overwrite
+      - flutter pub get
+      - flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
